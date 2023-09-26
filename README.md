@@ -44,7 +44,7 @@ Provide step-by-step instructions on how to install and set up your project. Inc
 
 2. Navigate to the project directory:
    ```bash
-   git clone https://github.com/DhimanSelise/angular-core-topics.git
+   cd angular-core-topics
    
 4. Install dependencies:
     ```bash
