@@ -1,0 +1,17 @@
+<p>movies works!</p>
+
+<!-- <button mat-button (click)="add()" >Perform Add</button> -->
+
+<div fxLayout="row wrap">
+    <!-- <pre>{{upcomingMovies | json}}</pre> -->
+    <div *ngFor="let movie of upcomingMovies.results" class="w-96 border-2 m-4 p-4">
+        <div>Movie Name: <strong>{{movie.title}}</strong></div>
+        <img class="my-4" [src]="getImageUrl(movie.backdrop_path)" alt="">
+        <div>{{movie.overview}}</div>
+    </div>
+</div>
+
+<mat-paginator [length]="upcomingMovies.total_results" [pageSizeOptions]="[20]" (page)="onPageChange($event)">
+</mat-paginator>
+
+<!-- https://image.tmdb.org/t/p/w342/mXLOHHc1Zeuwsl4xYKjKh2280oL.jpg -->

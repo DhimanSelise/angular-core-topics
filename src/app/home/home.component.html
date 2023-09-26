@@ -1,0 +1,12 @@
+<p>home-component works!</p>
+
+<ul>
+    <li *ngFor="let task of tasks">
+        {{task}} <button (click)="delete(task)">X</button>
+    </li>
+</ul>
+<p *ngIf="tasks.length > 1">tired</p>
+
+
+<input [(ngModel)]="newTask">
+<button (click)="addTask(newTask)">Add</button>

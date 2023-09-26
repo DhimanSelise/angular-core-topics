@@ -1,0 +1,60 @@
+<p>contact-us works!</p>
+<!-- <div class="p-16" fxLayout="column" fxLayoutAlign="start center" >
+    <div class="mb-12">
+        <span class="text-xl">Contact us with your skills</span>
+    </div>
+    <mat-form-field class="" appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name">
+    </mat-form-field>
+
+    <mat-form-field class="" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email">
+    </mat-form-field>
+
+    <mat-form-field class="" appearance="fill">
+        <mat-label>Skill</mat-label>
+        <input matInput placeholder="Email">
+    </mat-form-field>
+    <mat-icon>add</mat-icon>
+    <button mat-raised-button color="primary">Submit</button>
+</div> -->
+
+
+<form class="p-24" [formGroup]="myReactiveForm" >
+    <div class="mb-12">
+        <span class="text-xl">Contact us with your skills - [Example of Simple Dynamic Form]</span>
+    </div>
+    <mat-form-field class="">
+      <mat-label>User Name</mat-label>
+      <input matInput placeholder="User Username" formControlName="username">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="your mail" formControlName="email">
+    </mat-form-field>
+    <span *ngIf="!myReactiveForm.get('email').valid && myReactiveForm.get('email').touched" >
+        Custom validation message
+    </span>
+    <hr>
+    <div formArrayName="skills" class="mt-4">
+        <ng-container *ngFor="let skill of myReactiveForm.get('skills').controls; index as i">
+            <mat-form-field class="mr-4" >
+                <mat-label>Skills</mat-label>
+                <input matInput placeholder="Enter Skill" [formControlName]="i">
+            </mat-form-field>
+            <mat-icon color="warn" class="mr-4 cursor-pointer" matTooltip="Remove Skill" (click)="removeSkill(i)">close</mat-icon>
+        </ng-container>
+        <mat-icon color="primary" class="cursor-pointer" (click)="addSkill()">add_circle</mat-icon>
+    </div>
+    
+    
+
+    <hr class="my-4">
+
+    <button type="submit" mat-raised-button color="primary" class="mt-4" (click)="onSubmit()">
+        submit
+    </button>
+</form>
