@@ -19,6 +19,7 @@ This repository contains the code and materials from a recent class covering var
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Live Demo](#livedemo)
+- [Contact](#contact)
 
 
 
@@ -63,4 +64,4 @@ If you have any questions or need further assistance, feel free to get in touch:
 
 - **Name:** Dhiman Sarker Bappi
 - **Email:** [dhiman.sarker@selise.ch](mailto:dhiman.sarker@selise.ch)
-- **WhatsApp:** +88 01684 216 333
+- **WhatsApp:** +88 01521 445 723
